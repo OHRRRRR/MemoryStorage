@@ -3170,7 +3170,10 @@ __metadata:
     react: 18.3.1
     react-native: 0.75.4
     react-native-asset: ^2.1.1
+    react-native-calendars: ^1.1307.0
     react-native-gesture-handler: ^2.20.0
+    react-native-image-picker: ^7.1.2
+    react-native-permissions: ^5.0.0
     react-native-reanimated: ^3.15.4
     react-native-safe-area-context: ^4.11.0
     react-native-screens: ^3.34.0
@@ -6005,7 +6008,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.0":
+"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -7494,7 +7497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:4.0.8, lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
@@ -7515,7 +7518,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:>4.17.0, lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:>4.17.0, lodash@npm:^4.17.15, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -7643,7 +7646,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoize-one@npm:^5.0.0":
+"memoize-one@npm:^5.0.0, memoize-one@npm:^5.2.1":
   version: 5.2.1
   resolution: "memoize-one@npm:5.2.1"
   checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
@@ -8111,6 +8114,13 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
+  languageName: node
+  linkType: hard
+
+"moment@npm:^2.29.4":
+  version: 2.30.1
+  resolution: "moment@npm:2.30.1"
+  checksum: 859236bab1e88c3e5802afcf797fc801acdbd0ee509d34ea3df6eea21eb6bcc2abd4ae4e4e64aa7c986aa6cba563c6e62806218e6412a765010712e5fa121ba6
   languageName: node
   linkType: hard
 
@@ -8856,7 +8866,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:15.8.1, prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -9001,6 +9011,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-calendars@npm:^1.1307.0":
+  version: 1.1307.0
+  resolution: "react-native-calendars@npm:1.1307.0"
+  dependencies:
+    hoist-non-react-statics: ^3.3.1
+    lodash: ^4.17.15
+    memoize-one: ^5.2.1
+    moment: ^2.29.4
+    prop-types: ^15.5.10
+    react-native-swipe-gestures: ^1.0.5
+    recyclerlistview: ^4.0.0
+    xdate: ^0.8.0
+  dependenciesMeta:
+    moment:
+      optional: true
+  checksum: 1fc559d66bf0c687c09ba9462f243051127154efb4e0e293ddbabdfe8a64523ca114c905d853a2b911626b32c2f25abdb1de39cd07e8865d8c6a970991175195
+  languageName: node
+  linkType: hard
+
 "react-native-codegen@npm:^0.0.7":
   version: 0.0.7
   resolution: "react-native-codegen@npm:0.0.7"
@@ -9037,6 +9066,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-image-picker@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "react-native-image-picker@npm:7.1.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: af52328b7cb06c28549442f0d923cfa92dde8d5a968a642336df4c882f81adbf0e5e606a14de27f96883a76fa1e03230061c4080011c9107942edebc8e09c478
+  languageName: node
+  linkType: hard
+
 "react-native-modal-popover@npm:^2.0.1":
   version: 2.1.3
   resolution: "react-native-modal-popover@npm:2.1.3"
@@ -9050,9 +9089,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-permissions@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "react-native-permissions@npm:5.0.0"
+  peerDependencies:
+    react: ">=18.1.0"
+    react-native: ">=0.70.0"
+    react-native-windows: ">=0.70.0"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 8674d7f276ad678c36f855e85a2f63d75abf88633fce31fa344ee983a4fa1571dea56eaf3e7949778eb0c971aad67092da5dc08dace67ccde84ddbe4b6e19d63
+  languageName: node
+  linkType: hard
+
 "react-native-reanimated@npm:^3.15.4":
-  version: 3.15.4
-  resolution: "react-native-reanimated@npm:3.15.4"
+  version: 3.15.5
+  resolution: "react-native-reanimated@npm:3.15.5"
   dependencies:
     "@babel/plugin-transform-arrow-functions": ^7.0.0-0
     "@babel/plugin-transform-class-properties": ^7.0.0-0
@@ -9069,7 +9122,7 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 42eea2344797a7a749ae77f1c32586ba21bfc2e0fe0e05ccbcf6d9fad16cd7ae3407568574130f008b66c56a439b147cbb387c2ec586b0ac5bfe14527293f286
+  checksum: 0b6cb4e555fd1ac757aecb5484f08fde026fb55c0d42f2f960c62683d1ba5269ce645bf6426d99a8fef84e9bdeed103abe6eed9b3dd439389fd9a7bed384b5ad
   languageName: node
   linkType: hard
 
@@ -9093,6 +9146,13 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 28c1f6e556c318ffcbd79d153b9612cc8a0b8d8b70f909d3cde2fd6d0586a7c151a449e57400d8996f4ee6c3b5140c5c4f643a427e974f6dc573b2bcd8eb7356
+  languageName: node
+  linkType: hard
+
+"react-native-swipe-gestures@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "react-native-swipe-gestures@npm:1.0.5"
+  checksum: d637bc40baa50fa0ce3b6cf2b494efeceaea03cc3875cb7cf7d76922914a21d5e6b098d4a084fb291ce61bfbb0a241c03cff24b15bebf0cfae1c146f4ad10d92
   languageName: node
   linkType: hard
 
@@ -9277,6 +9337,20 @@ __metadata:
     react-native:
       optional: true
   checksum: 65edecbcb8d2cde89bfd61ec679c200483472a6cd343c33e4e9142b6ce524fb17d1fecc2bfd8c392926aaa8178c81457f165b32abce2a9662f51f98822c0a9cc
+  languageName: node
+  linkType: hard
+
+"recyclerlistview@npm:^4.0.0":
+  version: 4.2.1
+  resolution: "recyclerlistview@npm:4.2.1"
+  dependencies:
+    lodash.debounce: 4.0.8
+    prop-types: 15.8.1
+    ts-object-utils: 0.0.5
+  peerDependencies:
+    react: ">= 15.2.1"
+    react-native: ">= 0.30.0"
+  checksum: 48e84937f803ac2acb510b2bc36b3ef1ea9c5383540a832f80c87d7e7f933b26c59e4ffc2d7de529be55e14a8d551c4f6660a450ad220142f351e6bf6e630450
   languageName: node
   linkType: hard
 
@@ -10538,6 +10612,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-object-utils@npm:0.0.5":
+  version: 0.0.5
+  resolution: "ts-object-utils@npm:0.0.5"
+  checksum: 83c48fbdaba392fb2c01cea53b267ed5538d2bb44fc6c3eecc10bcfabc1780bfa6ec8569b52bbf0140d9b521d9049d5f15884e12286918244d463d854dbc73cb
+  languageName: node
+  linkType: hard
+
 "tslib@npm:2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
@@ -11128,6 +11209,13 @@ __metadata:
     simple-plist: ^1.0.0
     uuid: ^3.3.2
   checksum: aaa4569f96411f3a024abfa9fb27f2b1dfcf0544b91d2a8b63a36214042b4560dc455942abd9b95836cdd24386d4a6731faf339e32b496b46b4ca810a1dea0e1
+  languageName: node
+  linkType: hard
+
+"xdate@npm:^0.8.0":
+  version: 0.8.3
+  resolution: "xdate@npm:0.8.3"
+  checksum: 5fa07921dca6e75ad6ce2945477ed68974ac840d5b446015165aef6afdb000116e07964a4a47ab6ad36f8c398adbcb1e2ba43202e87b6190587672016c214ab7
   languageName: node
   linkType: hard
 
