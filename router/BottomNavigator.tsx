@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeScreen from '../pages/HomeScreen';
-import SettingsScreen from '../components/SettingsScreen';
+import SettingsScreen from '../components/Home/MenuTag';
 
 const Tab = createBottomTabNavigator();
 export default function BottomNavigator() {
@@ -34,7 +34,7 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name="기억달력"
-        component={SettingsScreen}
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
@@ -45,7 +45,7 @@ export default function BottomNavigator() {
 
       <Tab.Screen
         name="기억 갤러리"
-        component={SettingsScreen}
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
@@ -55,7 +55,7 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name="내 정보"
-        component={SettingsScreen}
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
