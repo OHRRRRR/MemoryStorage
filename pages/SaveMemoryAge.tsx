@@ -14,7 +14,7 @@ const SaveMemoryAge = () => {
         <View style={styles.titleContainer}>
           <Text style={styles.text_title}>기억저장소</Text>
           <Image
-            source={require('/Users/HYERYEONG/Desktop/mini_project/MemoryStorage/assets/images/letter.png')}
+            source={require('../assets/images/letter.png')}
             style={styles.image}
           />
         </View>
