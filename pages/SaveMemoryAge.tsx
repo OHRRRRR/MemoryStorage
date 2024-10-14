@@ -11,6 +11,7 @@ const SaveMemoryAge = () => {
 
   return (
     <View style={styles.container}>
+
       <MainTemplate
         subtitle="기억 저장소"
         description="저장하고 싶은 기억을 선택해 주세요"

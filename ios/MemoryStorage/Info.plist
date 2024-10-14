@@ -49,6 +49,10 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MaterialIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>Cafe24Ssurround.ttf</string>
 		<string>Cafe24Ssurround-v2.0.otf</string>
 		<string>Pretendard-Black.otf</string>
 		<string>Pretendard-Bold.otf</string>
