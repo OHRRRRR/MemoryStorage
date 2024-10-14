@@ -53,6 +53,7 @@
 		<string>Feather.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>Cafe24Ssurround.ttf</string>
+		<string>Cafe24Ssurround-v2.0.otf</string>
 		<string>Pretendard-Black.otf</string>
 		<string>Pretendard-Bold.otf</string>
 		<string>Pretendard-ExtraBold.otf</string>
@@ -63,5 +64,7 @@
 		<string>Pretendard-SemiBold.otf</string>
 		<string>Pretendard-Thin.otf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+<string>사진을 업로드하기 위해 사진 라이브러리 접근이 필요합니다.</string>
 </dict>
 </plist>
