@@ -9,29 +9,56 @@ import {
 } from 'react-native';
 import MainTemplate from '../components/MainTemplate';
 import {Calendar, DateData} from 'react-native-calendars';
-import {launchImageLibrary} from 'react-native-image-picker';
-import {RequestPermission} from '../components/requestPermission';
-
-// DateObject 타입 직접 정의
-interface DateObject {
-  year: number;
-  month: number;
-  day: number;
-  timestamp: number;
-  dateString: string;
-}
-
-interface SelectedImages {
-  [key: string]: string; // 각 날짜(dateString)를 키로 하고, 이미지 URI를 값으로 가짐
-}
+import {launchImageLibrary, launchCamera} from 'react-native-image-picker';
+import {RequestPermission} from '../components/MemoryCalender/RequestPermission';
 
 const MemoryCalender = () => {
-  console.log('MemoryCalender 렌더링 중');
+  const [selectedImages, setSelectedImages] = useState<{[key: string]: string}>(
+    {},
+  );
 
-  const [selectedImages, setSelectedImages] = useState<SelectedImages>({});
+  const handleDayPress = async (day: DateData) => {
+    const hasPermission = await RequestPermission();
+    if (!hasPermission) {
+      Alert.alert('갤러리 접근 권한이 필요합니다.');
+      return;
+    }
 
-  const simpleDayPress = (day: DateData) => {
-    console.log('테스트 - 날짜 선택됨:', day); // 클릭된 날짜 확인
+    // 사용자가 사진 선택 또는 카메라 사용을 선택하도록 안내
+    Alert.alert(
+      '사진 선택',
+      '갤러리에서 사진을 선택하시겠습니까, 아니면 카메라로 찍으시겠습니까?',
+      [
+        {
+          text: '갤러리',
+          onPress: () =>
+            launchImageLibrary({mediaType: 'photo'}, handleImageResponse(day)),
+        },
+        {
+          text: '카메라',
+          onPress: () =>
+            launchCamera({mediaType: 'photo'}, handleImageResponse(day)),
+        },
+        {text: '취소', style: 'cancel'},
+      ],
+    );
+  };
+
+  // 이미지 응답 처리
+  const handleImageResponse = (day: DateData) => (response: any) => {
+    if (response.didCancel) {
+      Alert.alert('사용자가 취소했습니다.');
+    } else if (response.errorCode) {
+      Alert.alert('이미지 선택 중 오류가 발생했습니다', response.errorMessage);
+    } else if (response.assets && response.assets.length > 0) {
+      const selectedUri = response.assets[0].uri;
+      if (selectedUri) {
+        setSelectedImages(prevImages => ({
+          ...prevImages,
+          [day.dateString]: selectedUri,
+        }));
+      }
+    }
   };
 
   return (
@@ -45,11 +72,8 @@ const MemoryCalender = () => {
         <Calendar
           current={new Date().toISOString().split('T')[0]}
           monthFormat={'yyyy년 MM월'}
-          onMonthChange={(month: DateObject) =>
-            console.log('월 변경됨:', month)
-          }
           enableSwipeMonths={true}
-          onDayPress={simpleDayPress} // 날짜 클릭 이벤트 설정
+          onDayPress={handleDayPress}
           theme={{
             todayTextColor: '#5C57BC',
             arrowColor: '#5C57BC',
@@ -67,8 +91,7 @@ const MemoryCalender = () => {
           }}
           style={styles.calendar}
           dayComponent={({date}: {date: DateData}) => (
-            <TouchableOpacity onPress={() => simpleDayPress(date)}>
-              {/* 클릭 이벤트 추가 */}
+            <TouchableOpacity onPress={() => handleDayPress(date)}>
               <View>
                 {selectedImages[date.dateString] ? (
                   <Image

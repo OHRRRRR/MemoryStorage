@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeScreen from '../pages/HomeScreen';
 import SettingsScreen from '../components/Home/MenuTag';
+import MemoryCalender from '../pages/MemoryCalender';
 
 const Tab = createBottomTabNavigator();
 export default function BottomNavigator() {
@@ -34,7 +35,7 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name="기억달력"
-        component={HomeScreen}
+        component={MemoryCalender}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (

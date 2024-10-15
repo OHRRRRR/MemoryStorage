@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MemoryStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MemoryStorageTests.m */; };
 		0414890EA2804469AA1AC1DC /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A18F68C4884E74A3EA6B67 /* Pretendard-ExtraBold.otf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-MemoryStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-MemoryStorage.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1408735EB33B4A0A8CD40535 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2247E0F90544ACBD83BF4A /* Pretendard-Regular.otf */; };
 		14AD35CA2C114CBFBD3E9F73 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 801FBF71F1494AF2981C69BD /* Pretendard-Medium.otf */; };
+		152C43449B2F4103CAD52171 /* libPods-MemoryStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E473E21EDC30EFB64B792A56 /* libPods-MemoryStorage.a */; };
 		23F97779ED874997BD212F9C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41A9DE2986CA4C9A9B9DCAF3 /* Pretendard-Light.otf */; };
 		4010E8AA1FC4042D079F489E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 32724EB974CDA291BAD36DE0 /* PrivacyInfo.xcprivacy */; };
 		4416B1563635465FB6747341 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87713F02DD3449CA8FF9BE69 /* Pretendard-SemiBold.otf */; };
 		4629249DB4954B29B629AA09 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 550F69BEBBE8435F992AEC8B /* Pretendard-Light.otf */; };
 		4F2F84450A02421792F939DF /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C36AE47ED6844668738C455 /* Pretendard-Regular.otf */; };
+		52E56B82E93CF13CCB225DA3 /* libPods-MemoryStorage-MemoryStorageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB3BF6024133BF81057A6A0 /* libPods-MemoryStorage-MemoryStorageTests.a */; };
 		5399A3E5531D43C7AFF5E853 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C77E2A5A0F9941C2B87587F2 /* Pretendard-ExtraLight.otf */; };
 		5BE84E54E71B4C6F8BE5BD53 /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E913AAA1F19E4F26A9F5886C /* Cafe24Ssurround.ttf */; };
 		6CB085149F0F48EAA44C4418 /* Cafe24Ssurround-v2.0.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4318F658A1D4FECB424E3AA /* Cafe24Ssurround-v2.0.otf */; };
 		72708E259AAF41EFA3D02541 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6E05127070442C95761DD4 /* Pretendard-SemiBold.otf */; };
 		732E2F52AC414B0C9DFEB5CE /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4589B276818C41E39FB965C4 /* Pretendard-Bold.otf */; };
-		7699B88040F8A987B510C191 /* libPods-MemoryStorage-MemoryStorageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MemoryStorage-MemoryStorageTests.a */; };
 		79062F5A09F344798DA10B41 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9A8A1FBBB0D42E3864EFD8E /* Pretendard-ExtraLight.otf */; };
 		80F233B633B74C908421C143 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BCAF0271AAA410AB0F1D0C6 /* Pretendard-Black.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -58,35 +58,35 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MemoryStorage/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MemoryStorage/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = MemoryStorage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-MemoryStorage-MemoryStorageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryStorage-MemoryStorageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BCAF0271AAA410AB0F1D0C6 /* Pretendard-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Black.otf"; path = "../assets/fonts/Pretendard-Black.otf"; sourceTree = "<group>"; };
-		32724EB974CDA291BAD36DE0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = MemoryStorage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-MemoryStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage.debug.xcconfig"; path = "Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage.debug.xcconfig"; sourceTree = "<group>"; };
-		3C6E05127070442C95761DD4 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-SemiBold.otf"; path = "../assets/fonts/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
-		41A9DE2986CA4C9A9B9DCAF3 /* Pretendard-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Light.otf"; path = "../assets/fonts/Pretendard-Light.otf"; sourceTree = "<group>"; };
-		4589B276818C41E39FB965C4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Bold.otf"; path = "../assets/fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		4A4C632584084E4291D7C5A3 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Medium.otf"; path = "../assets/fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
-		535AD2C976CE4F7299A7845C /* Pretendard-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Bold.otf"; path = "../assets/fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		550F69BEBBE8435F992AEC8B /* Pretendard-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Light.otf"; path = "../assets/fonts/Pretendard-Light.otf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-MemoryStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage.release.xcconfig"; path = "Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig"; path = "Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-MemoryStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryStorage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		801FBF71F1494AF2981C69BD /* Pretendard-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Medium.otf"; path = "../assets/fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
-		808F4CE2BD604C66BA8753F8 /* Pretendard-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Black.otf"; path = "../assets/fonts/Pretendard-Black.otf"; sourceTree = "<group>"; };
+		1D19B2C25130F360AA02B435 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig"; path = "Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BCAF0271AAA410AB0F1D0C6 /* Pretendard-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Black.otf"; path = "../assets/fonts/Pretendard-Black.otf"; sourceTree = "<group>"; };
+		32724EB974CDA291BAD36DE0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = MemoryStorage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3C6E05127070442C95761DD4 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-SemiBold.otf"; path = "../assets/fonts/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3D62C2C6A06E8D9867B8A8AC /* Pods-MemoryStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage.release.xcconfig"; path = "Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage.release.xcconfig"; sourceTree = "<group>"; };
+		41A9DE2986CA4C9A9B9DCAF3 /* Pretendard-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Light.otf"; path = "../assets/fonts/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		4589B276818C41E39FB965C4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Bold.otf"; path = "../assets/fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		4A4C632584084E4291D7C5A3 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Medium.otf"; path = "../assets/fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		535AD2C976CE4F7299A7845C /* Pretendard-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Bold.otf"; path = "../assets/fonts/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		550F69BEBBE8435F992AEC8B /* Pretendard-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Light.otf"; path = "../assets/fonts/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		6C9324B47BAC3498292FD440 /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage-MemoryStorageTests.release.xcconfig"; path = "Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests.release.xcconfig"; sourceTree = "<group>"; };
+		801FBF71F1494AF2981C69BD /* Pretendard-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Medium.otf"; path = "../assets/fonts/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		808F4CE2BD604C66BA8753F8 /* Pretendard-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Black.otf"; path = "../assets/fonts/Pretendard-Black.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MemoryStorage/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		83A18F68C4884E74A3EA6B67 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraBold.otf"; path = "../assets/fonts/Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
-		87713F02DD3449CA8FF9BE69 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-SemiBold.otf"; path = "../assets/fonts/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage-MemoryStorageTests.release.xcconfig"; path = "Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests.release.xcconfig"; sourceTree = "<group>"; };
-		8D457D1853D74774881EFD73 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Thin.otf"; path = "../assets/fonts/Pretendard-Thin.otf"; sourceTree = "<group>"; };
-		8E2247E0F90544ACBD83BF4A /* Pretendard-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Regular.otf"; path = "../assets/fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		9C36AE47ED6844668738C455 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Regular.otf"; path = "../assets/fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		B9A8A1FBBB0D42E3864EFD8E /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraLight.otf"; path = "../assets/fonts/Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
-		C4318F658A1D4FECB424E3AA /* Cafe24Ssurround-v2.0.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Cafe24Ssurround-v2.0.otf"; path = "../assets/fonts/Cafe24Ssurround-v2.0.otf"; sourceTree = "<group>"; };
-		C77E2A5A0F9941C2B87587F2 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraLight.otf"; path = "../assets/fonts/Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
-		D99998FA89DC4F2185105119 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Thin.otf"; path = "../assets/fonts/Pretendard-Thin.otf"; sourceTree = "<group>"; };
-		E913AAA1F19E4F26A9F5886C /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Cafe24Ssurround.ttf; path = ../assets/fonts/Cafe24Ssurround.ttf; sourceTree = "<group>"; };
+		83A18F68C4884E74A3EA6B67 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraBold.otf"; path = "../assets/fonts/Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		87713F02DD3449CA8FF9BE69 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-SemiBold.otf"; path = "../assets/fonts/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		8D457D1853D74774881EFD73 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Thin.otf"; path = "../assets/fonts/Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		8E2247E0F90544ACBD83BF4A /* Pretendard-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Regular.otf"; path = "../assets/fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		9C36AE47ED6844668738C455 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Regular.otf"; path = "../assets/fonts/Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		B9A8A1FBBB0D42E3864EFD8E /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraLight.otf"; path = "../assets/fonts/Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		C4318F658A1D4FECB424E3AA /* Cafe24Ssurround-v2.0.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cafe24Ssurround-v2.0.otf"; path = "../assets/fonts/Cafe24Ssurround-v2.0.otf"; sourceTree = "<group>"; };
+		C77E2A5A0F9941C2B87587F2 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraLight.otf"; path = "../assets/fonts/Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		D8EB6ECD121A616FB864B8F0 /* Pods-MemoryStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryStorage.debug.xcconfig"; path = "Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage.debug.xcconfig"; sourceTree = "<group>"; };
+		D99998FA89DC4F2185105119 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-Thin.otf"; path = "../assets/fonts/Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		E473E21EDC30EFB64B792A56 /* libPods-MemoryStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryStorage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E913AAA1F19E4F26A9F5886C /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Cafe24Ssurround.ttf; path = ../assets/fonts/Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F7FDB11F53F54F2C99392F9E /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraBold.otf"; path = "../assets/fonts/Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		F7FDB11F53F54F2C99392F9E /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pretendard-ExtraBold.otf"; path = "../assets/fonts/Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		FFB3BF6024133BF81057A6A0 /* libPods-MemoryStorage-MemoryStorageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryStorage-MemoryStorageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-MemoryStorage-MemoryStorageTests.a in Frameworks */,
+				52E56B82E93CF13CCB225DA3 /* libPods-MemoryStorage-MemoryStorageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-MemoryStorage.a in Frameworks */,
+				152C43449B2F4103CAD52171 /* libPods-MemoryStorage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-MemoryStorage.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-MemoryStorage-MemoryStorageTests.a */,
+				E473E21EDC30EFB64B792A56 /* libPods-MemoryStorage.a */,
+				FFB3BF6024133BF81057A6A0 /* libPods-MemoryStorage-MemoryStorageTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,16 +199,15 @@
 				8D457D1853D74774881EFD73 /* Pretendard-Thin.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-MemoryStorage.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-MemoryStorage.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */,
+				D8EB6ECD121A616FB864B8F0 /* Pods-MemoryStorage.debug.xcconfig */,
+				3D62C2C6A06E8D9867B8A8AC /* Pods-MemoryStorage.release.xcconfig */,
+				1D19B2C25130F360AA02B435 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */,
+				6C9324B47BAC3498292FD440 /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -228,7 +227,6 @@
 				D99998FA89DC4F2185105119 /* Pretendard-Thin.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,12 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MemoryStorageTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				88B892F055DE72A43C7AF3AA /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				B901F6BA00ED9C9CE9CE31F7 /* [CP] Embed Pods Frameworks */,
+				90C585FFC9F751BD8F900916 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,13 +257,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MemoryStorage" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				347880B502CC5D628EA52394 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				4F861D1B362FBD82AE4F673C /* [CP] Embed Pods Frameworks */,
+				CCAB4CBF8D283510FD4DA13C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,46 +367,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MemoryStorage-MemoryStorageTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		347880B502CC5D628EA52394 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,7 +389,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		4F861D1B362FBD82AE4F673C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B892F055DE72A43C7AF3AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoryStorage-MemoryStorageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C585FFC9F751BD8F900916 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B901F6BA00ED9C9CE9CE31F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -447,7 +462,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		CCAB4CBF8D283510FD4DA13C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,23 +477,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage/Pods-MemoryStorage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryStorage-MemoryStorageTests/Pods-MemoryStorage-MemoryStorageTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -514,7 +512,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */;
+			baseConfigurationReference = 1D19B2C25130F360AA02B435 /* Pods-MemoryStorage-MemoryStorageTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -541,7 +539,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */;
+			baseConfigurationReference = 6C9324B47BAC3498292FD440 /* Pods-MemoryStorage-MemoryStorageTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -565,11 +563,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-MemoryStorage.debug.xcconfig */;
+			baseConfigurationReference = D8EB6ECD121A616FB864B8F0 /* Pods-MemoryStorage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFRHL8DMXA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MemoryStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -592,11 +591,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-MemoryStorage.release.xcconfig */;
+			baseConfigurationReference = 3D62C2C6A06E8D9867B8A8AC /* Pods-MemoryStorage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFRHL8DMXA;
 				INFOPLIST_FILE = MemoryStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
