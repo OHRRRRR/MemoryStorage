@@ -1,68 +1,63 @@
-// components/MemoryCalender.tsx
 import React, {useState} from 'react';
-import {View, StyleSheet, Text, Image, Alert} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
 import MainTemplate from '../components/MainTemplate';
 import {Calendar, DateData} from 'react-native-calendars';
-import {launchImageLibrary} from 'react-native-image-picker';
-import {RequestPermission} from '../components/requestPermission';
-
-// DateObject 타입 직접 정의
-interface DateObject {
-  year: number;
-  month: number;
-  day: number;
-  timestamp: number;
-  dateString: string;
-}
-
-interface SelectedImages {
-  [key: string]: string; // 각 날짜(dateString)를 키로 하고, 이미지 URI를 값으로 가짐
-}
-const simpleDayPress = (day: DateData) => {
-  console.log('테스트 - 날짜 선택됨:', day);
-};
+import {launchImageLibrary, launchCamera} from 'react-native-image-picker';
+import {RequestPermission} from '../components/MemoryCalender/RequestPermission';
 
 const MemoryCalender = () => {
-  console.log('MemoryCalender 렌더링 중'); // 이 로그가 출력되는지 확인
-
-  // 각 날짜에 선택된 이미지를 저장할 상태
-  const [selectedImages, setSelectedImages] = useState<SelectedImages>({});
+  const [selectedImages, setSelectedImages] = useState<{[key: string]: string}>(
+    {},
+  );
 
   const handleDayPress = async (day: DateData) => {
-    console.log('날짜 선택됨:', day); // 선택된 날짜가 로그에 표시되는지 확인
-    try {
-      const hasPermission = await RequestPermission();
-      console.log('권한 상태:', hasPermission); // 권한 상태가 로그에 표시되는지 확인
+    const hasPermission = await RequestPermission();
+    if (!hasPermission) {
+      Alert.alert('갤러리 접근 권한이 필요합니다.');
+      return;
+    }
 
-      if (!hasPermission) {
-        Alert.alert('갤러리 접근 권한이 필요합니다.');
-        return;
+    // 사용자가 사진 선택 또는 카메라 사용을 선택하도록 안내
+    Alert.alert(
+      '사진 선택',
+      '갤러리에서 사진을 선택하시겠습니까, 아니면 카메라로 찍으시겠습니까?',
+      [
+        {
+          text: '갤러리',
+          onPress: () =>
+            launchImageLibrary({mediaType: 'photo'}, handleImageResponse(day)),
+        },
+        {
+          text: '카메라',
+          onPress: () =>
+            launchCamera({mediaType: 'photo'}, handleImageResponse(day)),
+        },
+        {text: '취소', style: 'cancel'},
+      ],
+    );
+  };
+
+  // 이미지 응답 처리
+  const handleImageResponse = (day: DateData) => (response: any) => {
+    if (response.didCancel) {
+      Alert.alert('사용자가 취소했습니다.');
+    } else if (response.errorCode) {
+      Alert.alert('이미지 선택 중 오류가 발생했습니다', response.errorMessage);
+    } else if (response.assets && response.assets.length > 0) {
+      const selectedUri = response.assets[0].uri;
+      if (selectedUri) {
+        setSelectedImages(prevImages => ({
+          ...prevImages,
+          [day.dateString]: selectedUri,
+        }));
       }
-
-      console.log('갤러리 열기 시작');
-
-      launchImageLibrary({mediaType: 'photo'}, response => {
-        console.log('갤러리 응답:', response); // 갤러리에서 이미지를 선택했을 때 응답이 로그에 표시되는지 확인
-
-        if (response.didCancel) {
-          Alert.alert('취소되었습니다');
-        } else if (response.errorCode) {
-          Alert.alert('갤러리 접근에 실패했습니다', response.errorMessage);
-        } else if (response.assets && response.assets.length > 0) {
-          const selectedUri = response.assets[0].uri;
-          console.log('선택된 이미지 URI:', selectedUri); // 선택된 이미지 URI가 로그에 표시되는지 확인
-
-          if (selectedUri) {
-            setSelectedImages(prevImages => ({
-              ...prevImages,
-              [day.dateString]: selectedUri,
-            }));
-            console.log('이미지 저장됨:', selectedImages); // 이미지가 상태에 저장되었는지 로그로 확인
-          }
-        }
-      });
-    } catch (error) {
-      console.error('handleDayPress 오류:', error); // 만약 오류가 있다면, 로그로 확인
     }
   };
 
@@ -75,17 +70,10 @@ const MemoryCalender = () => {
 
       <View style={styles.calendarContainer}>
         <Calendar
-          // 기본적으로 현재 날짜를 표시합니다.
           current={new Date().toISOString().split('T')[0]}
-          // 달력에서 요일을 표시하는 포맷을 한국어로 변경합니다.
           monthFormat={'yyyy년 MM월'}
-          onMonthChange={(month: DateObject) =>
-            console.log('월 변경됨:', month)
-          } // 직접 정의한 DateObject 타입 사용
-          // 오늘 날짜 버튼 추가
           enableSwipeMonths={true}
-          //   onDayPress={handleDayPress} // 여기가 올바르게 연결되어 있는지 확인
-          onDayPress={simpleDayPress} // 간단한 핸들러로 테스트
+          onDayPress={handleDayPress}
           theme={{
             todayTextColor: '#5C57BC',
             arrowColor: '#5C57BC',
@@ -96,24 +84,25 @@ const MemoryCalender = () => {
             textDayFontFamily: 'Pretendard-Medium',
             textMonthFontFamily: 'Pretendard-ExtraBold',
             textDayHeaderFontFamily: 'Pretendard-Regular',
-            textDayFontSize: 20, // 날짜 텍스트
-            textDayHeaderFontSize: 16, // 요일 헤더 텍스트
-            textMonthFontSize: 24, // 월 텍스트
-            dayTextColor: '#2d4150', // 날짜 텍스트
+            textDayFontSize: 20,
+            textDayHeaderFontSize: 16,
+            textMonthFontSize: 24,
+            dayTextColor: '#2d4150',
           }}
-          style={styles.calendar} // 추가된 스타일
-          // 선택된 날짜에 이미지를 표시
+          style={styles.calendar}
           dayComponent={({date}: {date: DateData}) => (
-            <View>
-              {selectedImages[date.dateString] ? (
-                <Image
-                  source={{uri: selectedImages[date.dateString]}}
-                  style={styles.selectedImage}
-                />
-              ) : (
-                <Text style={styles.dayText}>{date.day}</Text>
-              )}
-            </View>
+            <TouchableOpacity onPress={() => handleDayPress(date)}>
+              <View>
+                {selectedImages[date.dateString] ? (
+                  <Image
+                    source={{uri: selectedImages[date.dateString]}}
+                    style={styles.selectedImage}
+                  />
+                ) : (
+                  <Text style={styles.dayText}>{date.day}</Text>
+                )}
+              </View>
+            </TouchableOpacity>
           )}
         />
       </View>
@@ -132,11 +121,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0,
   },
   calendar: {
-    width: '100%', // 가로 크기를 화면에 맞추기
-    height: '75%', // 원하는 세로 크기 설정
+    width: '100%',
+    height: '75%',
   },
   selectedImage: {
-    width: 32, // 날짜 칸에 맞는 이미지 크기
+    width: 32,
     height: 32,
     borderRadius: 5,
   },

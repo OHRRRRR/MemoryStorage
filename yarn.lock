@@ -3173,7 +3173,7 @@ __metadata:
     react-native-calendars: ^1.1307.0
     react-native-gesture-handler: ^2.20.0
     react-native-image-picker: ^7.1.2
-    react-native-permissions: ^5.0.0
+    react-native-permissions: latest
     react-native-reanimated: ^3.15.4
     react-native-safe-area-context: ^4.11.0
     react-native-screens: ^3.34.0
@@ -9089,7 +9089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-permissions@npm:^5.0.0":
+"react-native-permissions@npm:latest":
   version: 5.0.0
   resolution: "react-native-permissions@npm:5.0.0"
   peerDependencies:
