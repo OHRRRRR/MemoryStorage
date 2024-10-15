@@ -11,7 +11,6 @@ const SaveMemoryAge = () => {
 
   return (
     <View style={styles.container}>
-
       <MainTemplate
         subtitle="기억 저장소"
         description="저장하고 싶은 기억을 선택해 주세요"
@@ -53,7 +52,11 @@ const SaveMemoryAge = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignContent: 'center',
+    padding: 3,
     backgroundColor: '#f3f2f6',
   },
   rowContainer: {
