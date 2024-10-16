@@ -10,7 +10,7 @@ import {
 import MainTemplate from '../components/MainTemplate';
 import {Calendar, DateData} from 'react-native-calendars';
 import {launchImageLibrary, launchCamera} from 'react-native-image-picker';
-import {RequestPermission} from '../components/MemoryCalender/RequestPermission';
+import {getPermission} from '../utils/permissions';
 
 const MemoryCalender = () => {
   const [selectedImages, setSelectedImages] = useState<{[key: string]: string}>(
@@ -18,33 +18,37 @@ const MemoryCalender = () => {
   );
 
   const handleDayPress = async (day: DateData) => {
-    const hasPermission = await RequestPermission();
-    if (!hasPermission) {
-      Alert.alert('갤러리 접근 권한이 필요합니다.');
-      return;
-    }
-
-    // 사용자가 사진 선택 또는 카메라 사용을 선택하도록 안내
+    // 사용자에게 갤러리 또는 카메라 권한 요청
     Alert.alert(
       '사진 선택',
       '갤러리에서 사진을 선택하시겠습니까, 아니면 카메라로 찍으시겠습니까?',
       [
         {
-          text: '갤러리',
-          onPress: () =>
-            launchImageLibrary({mediaType: 'photo'}, handleImageResponse(day)),
+          text: '사진 선택',
+          onPress: async () => {
+            const hasPermission = await getPermission('photo');
+            if (hasPermission) {
+              launchImageLibrary(
+                {mediaType: 'photo'},
+                handleImageResponse(day),
+              );
+            }
+          },
         },
         {
-          text: '카메라',
-          onPress: () =>
-            launchCamera({mediaType: 'photo'}, handleImageResponse(day)),
+          text: '카메라 접근',
+          onPress: async () => {
+            const hasPermission = await getPermission('camera');
+            if (hasPermission) {
+              launchCamera({mediaType: 'photo'}, handleImageResponse(day));
+            }
+          },
         },
         {text: '취소', style: 'cancel'},
       ],
     );
   };
 
-  // 이미지 응답 처리
   const handleImageResponse = (day: DateData) => (response: any) => {
     if (response.didCancel) {
       Alert.alert('사용자가 취소했습니다.');

@@ -26,13 +26,14 @@ const MainTemplate: React.FC<MainTemplateProps> = ({subtitle, description}) => {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'flex-start',
-    backgroundColor: '#f3f2f6',
+    width: '100%',
   },
   textContainer: {
+    justifyContent: 'flex-start',
     paddingTop: 96,
-    paddingLeft: 29,
-    marginBottom: 50,
+    paddingLeft: 20,
+    paddingRight: 10,
+    marginBottom: 10, // 제목과 설명 사이 간격
   },
   titleContainer: {
     flexDirection: 'row',
@@ -40,22 +41,22 @@ const styles = StyleSheet.create({
   },
   text_title: {
     fontSize: 35,
-    marginBottom: 30,
-    fontFamily: 'Pretendard-Bold',
+    marginBottom: 20, // 제목과 나머지 요소 사이 간격
+    fontFamily: 'Cafe24Ssurround', // 변경된 폰트 적용
     fontWeight: '800',
-    color: '#5C57BC',
-    marginRight: 10,
+    color: '#5C57BC', // 텍스트 색상
+    marginRight: 10, // 이미지와 텍스트 사이 간격
   },
   image: {
     width: 40,
     height: 40,
-    marginTop: -30,
+    marginTop: -20,
     marginRight: 10,
   },
   text_subtitle: {
     fontSize: 30,
-    fontFamily: 'Pretendard-ExtraBold',
-    marginBottom: 10,
+    fontFamily: 'Pretendard-ExtraBold', // 변경된 폰트 적용
+    marginBottom: 10, // 제목과 설명 사이 간격
   },
   text_description: {
     fontSize: 19,
