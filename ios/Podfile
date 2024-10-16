@@ -1,18 +1,8 @@
-# Resolve react_native_pods.rb with node to allow for hoisting
-require Pod::Executable.execute_command('node', ['-p',
-  'require.resolve(
-    "react-native/scripts/react_native_pods.rb",
-    {paths: [process.argv[1]]},
-  )', __dir__]).strip
+platform :ios, '14.0'  # iOS 최소 버전 12.0으로 설정
 
-platform :ios, min_ios_version_supported
-prepare_react_native_project!
-
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  # use_frameworks! :linkage => linkage.to_sym
-end
+# React Native와 react-native-permissions 스크립트 로드
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/react-native-permissions/scripts/setup'
 
 target 'MemoryStorage' do
   config = use_native_modules!
@@ -22,18 +12,17 @@ target 'MemoryStorage' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  # react-native-permissions를 전체로 사용
-  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  # 필요한 권한 추가 (react-native-permissions 권한 설정)
+  setup_permissions([
+    'Camera',
+    'PhotoLibrary',
+  ])
 
   target 'MemoryStorageTests' do
     inherit! :complete
   end
 
   post_install do |installer|
-    react_native_post_install(
-      installer,
-      config[:reactNativePath],
-      :mac_catalyst_enabled => false
-    )
+    react_native_post_install(installer)
   end
 end
