@@ -1,20 +1,18 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import styled from 'styled-components/native';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import BottomNavigator from './router/BottomNavigator';
+// import CameraScreen from './components/MemoryCalender/CameraScreen';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <Container>
-      <NavigationContainer>
-        <BottomNavigator />
-      </NavigationContainer>
-    </Container>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
+        {/* <Stack.Screen name="CameraScreen" component={CameraScreen} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const Container = styled.View`
-  flex: 1;
-  background-color: #f3f2f6;
-`;

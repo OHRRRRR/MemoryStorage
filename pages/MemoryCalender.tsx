@@ -9,44 +9,53 @@ import {
 } from 'react-native';
 import MainTemplate from '../components/MainTemplate';
 import {Calendar, DateData} from 'react-native-calendars';
-import {launchImageLibrary, launchCamera} from 'react-native-image-picker';
+import {launchImageLibrary} from 'react-native-image-picker';
 import {getPermission} from '../utils/permissions';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+
+// 네비게이션 스택에 대한 타입 정의
+type RootStackParamList = {
+  BottomNavigator: undefined;
+  CameraScreen: {onCapture: (path: string) => void};
+};
 
 const MemoryCalender = () => {
   const [selectedImages, setSelectedImages] = useState<{[key: string]: string}>(
     {},
   );
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const handleDayPress = async (day: DateData) => {
-    // 사용자에게 갤러리 또는 카메라 권한 요청
-    Alert.alert(
-      '사진 선택',
-      '갤러리에서 사진을 선택하시겠습니까, 아니면 카메라로 찍으시겠습니까?',
-      [
-        {
-          text: '사진 선택',
-          onPress: async () => {
-            const hasPermission = await getPermission('photo');
-            if (hasPermission) {
-              launchImageLibrary(
-                {mediaType: 'photo'},
-                handleImageResponse(day),
-              );
-            }
-          },
+    Alert.alert('사진 선택', '오늘의 기억을 사진으로 남기세요!', [
+      {
+        text: '갤러리에서 사진 선택',
+        onPress: async () => {
+          const hasPermission = await getPermission('photo');
+          if (hasPermission) {
+            const result = await launchImageLibrary({mediaType: 'photo'});
+            handleImageResponse(day)(result); // 응답 전달
+          }
         },
-        {
-          text: '카메라 접근',
-          onPress: async () => {
-            const hasPermission = await getPermission('camera');
-            if (hasPermission) {
-              launchCamera({mediaType: 'photo'}, handleImageResponse(day));
-            }
-          },
+      },
+      {
+        text: '카메라',
+        onPress: async () => {
+          const hasPermission = await getPermission('camera');
+          if (hasPermission) {
+            // CameraScreen으로 이동하면서 onCapture 콜백을 전달
+            navigation.navigate('CameraScreen', {
+              onCapture: (path: string) => {
+                setSelectedImages(prevImages => ({
+                  ...prevImages,
+                  [day.dateString]: path,
+                }));
+              },
+            });
+          }
         },
-        {text: '취소', style: 'cancel'},
-      ],
-    );
+      },
+      {text: '취소', style: 'cancel'},
+    ]);
   };
 
   const handleImageResponse = (day: DateData) => (response: any) => {
@@ -62,6 +71,8 @@ const MemoryCalender = () => {
           [day.dateString]: selectedUri,
         }));
       }
+    } else {
+      Alert.alert('이미지를 선택하지 않았습니다.');
     }
   };
 
@@ -96,7 +107,7 @@ const MemoryCalender = () => {
           style={styles.calendar}
           dayComponent={({date}: {date: DateData}) => (
             <TouchableOpacity onPress={() => handleDayPress(date)}>
-              <View>
+              <View style={styles.dayContainer}>
                 {selectedImages[date.dateString] ? (
                   <Image
                     source={{uri: selectedImages[date.dateString]}}
@@ -121,20 +132,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#f3f2f6',
   },
   calendarContainer: {
-    marginTop: -30,
-    paddingHorizontal: 0,
+    flex: 1,
+    justifyContent: 'center',
+    marginTop: -20,
   },
   calendar: {
     width: '100%',
-    height: '75%',
+    height: '100%',
+  },
+  dayContainer: {
+    width: 60,
+    height: 60,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    padding: 5,
   },
   selectedImage: {
-    width: 32,
-    height: 32,
+    width: '100%',
+    height: 70,
     borderRadius: 5,
   },
   dayText: {
-    textAlign: 'center',
     fontSize: 18,
     color: '#2d4150',
   },

@@ -1,14 +1,32 @@
-import {View, Text} from 'react-native';
-import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeScreen from '../pages/HomeScreen';
-import SettingsScreen from '../components/Home/MenuTag';
 import MemoryCalender from '../pages/MemoryCalender';
 import SaveMemoryAge from '../pages/SaveMemoryAge';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+// HomeScreen에 Stack Navigator 추가
+function HomeStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SaveMemoryAge"
+        component={SaveMemoryAge}
+        options={{headerShown: false}} // 페이지 헤더를 숨김
+      />
+    </Stack.Navigator>
+  );
+}
+
 export default function BottomNavigator() {
   return (
     <Tab.Navigator
@@ -26,7 +44,7 @@ export default function BottomNavigator() {
       }}>
       <Tab.Screen
         name="홈"
-        component={HomeScreen}
+        component={HomeStack} // HomeStack을 탭 네비게이터로 사용
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (

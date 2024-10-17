@@ -25,6 +25,7 @@ export const getPermission = async (
   permissionModalStore.setOpen(true);
 
   const handlePermissionSuccess = () => {
+    console.log(`${permission} 권한 요청 성공`); // 권한 요청 성공 시 로그 출력
     if (onSuccess) onSuccess();
     permissionModalStore.setOpen(false);
     permissionModalStore.setMessage('');
@@ -32,6 +33,7 @@ export const getPermission = async (
   };
 
   const handlePermissionError = (message: string, openSetting = false) => {
+    console.log(`${permission} 권한 요청 실패: ${message}`); // 권한 요청 실패 시 로그 출력
     if (openSetting) goToSettings(message);
     if (onFailed) onFailed();
     permissionModalStore.setOpen(false);
@@ -40,6 +42,8 @@ export const getPermission = async (
   };
 
   const checked = await check(needPermission);
+  console.log(`${permission} 권한 상태: ${checked}`); // 권한 상태 체크 후 로그 출력
+
   switch (checked) {
     case RESULTS.UNAVAILABLE:
       return handlePermissionError('이 기능을 사용할 수 없습니다.', essential);
@@ -47,6 +51,7 @@ export const getPermission = async (
       return handlePermissionSuccess();
     case RESULTS.DENIED:
       const requested = await request(needPermission);
+      console.log(`${permission} 권한 요청 결과: ${requested}`); // 권한 요청 결과 로그 출력
       if (requested === RESULTS.GRANTED) {
         return handlePermissionSuccess();
       }
